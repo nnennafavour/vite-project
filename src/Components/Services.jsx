@@ -89,9 +89,13 @@ const Services = () => {
       />
 
       {/* CTA */}
-      <div className="bg-[#F3F3F3] rounded-2xl mt-20 p-8 md:p-16 max-w-[1240px] h-[347px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="bg-[#F3F3F3] rounded-[45px] mt-20 
+                      w-full md:w-[1240px] h-auto md:h-[347px] 
+                      mx-auto flex flex-col md:flex-row items-center justify-between 
+                      gap-6 md:gap-10 p-8 md:p-16">
 
-        <div className="max-w-lg">
+        {/* Text */}
+        <div className="w-full md:w-1/2">
           <h2 className="text-xl md:text-2xl font-bold">
             Let's make things happen
           </h2>
@@ -106,11 +110,14 @@ const Services = () => {
           </button>
         </div>
 
-        <img
-          src={Frame19}
-          alt="frame19"
-          className="w-full max-w-md"
-        />
+        {/* Image */}
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
+          <img
+            src={Frame19}
+            alt="frame"
+            className="w-full max-w-md"
+          />
+        </div>
 
       </div>
     </section>
