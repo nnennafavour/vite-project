@@ -61,6 +61,8 @@ import Hero from "../Components/Hero";
 import Services from "../Components/Services";
 import Case from "../Components/Case";
 import Team from "../Components/Team";
+import Testimonial from "../Components/Testimonial";
+import Contact from "../Components/Contact";
 import Blog from "../Components/Blog";
 
 function Home() {
@@ -70,6 +72,8 @@ function Home() {
       <section id="services"><Services /></section>
       <section id="cases"><Case /></section>
       <section id="team"><Team /></section>
+      <section id="testimonial"><Testimonial /></section>
+      <section id="contact"><Contact /></section>
       <section id="blog"><Blog /></section>
     </>
   );
