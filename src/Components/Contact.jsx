@@ -142,7 +142,6 @@ const Contact = () => {
           <span className="bg-[#B9FF66] px-3 py-2 text-xl md:text-2xl font-bold w-fit">
             Contact Us
           </span>
-
           <p className="max-w-lg text-sm md:text-base">
             Connect with Us: Let's Discuss Your Digital Marketing Needs
           </p>
@@ -150,68 +149,62 @@ const Contact = () => {
       </div>
 
       {/* MAIN BOX */}
-      <div className="bg-[#F3F3F3] w-full max-w-7xl mx-auto mt-8 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8">
+      <div className="bg-[#F3F3F3] w-full max-w-7xl mx-auto mt-8 rounded-3xl p-6 md:p-10 relative overflow-hidden flex flex-col gap-6">
 
         {/* RADIO BUTTONS */}
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center mb-4 relative z-10">
           <img src={Radiobutton} alt="radiobutton" className="w-7 h-7" /> 
           <p>Say Hi</p>
           <img src={Radiobutton1} alt="radiobutton1" className="w-7 h-7" />
           <p>Get a Quote</p> 
         </div>
 
-        {/* CONTENT */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full">
+        {/* FORM */}
+        <form onSubmit={handleSubmit} className="flex flex-col flex-1 gap-4 relative z-10 max-w-full md:max-w-[600px]">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="w-full h-[190px] px-4 py-2 border-2 border-gray-400 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            className="mt-4 w-full bg-black hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
 
-          {/* LEFT - FORM */}
-          <form onSubmit={handleSubmit} className="flex flex-col flex-1 gap-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border-2 border-gray-400 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="mt-4 w-full bg-black hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
-
-          {/* RIGHT - IMAGE */}
-          <div className="flex-1 flex justify-center md:justify-end">
-            <img
-              src={IllustrationCon}
-              alt="illustration"
-              className="w-full max-w-xs md:max-w-md h-auto object-contain"
-            />
-          </div>
-
+        {/* ILLUSTRATION IMAGE - MOBILE ADJUSTMENT */}
+        <div className="absolute top-0 right-0 bottom-0 w-1/2 sm:w-2/5 md:w-[600px] overflow-hidden">
+          <img
+            src={IllustrationCon}
+            alt="illustration"
+            className="object-cover md:translate-x-[50%] translate-x-[25%] 
+                       md:h-full h-[150px] md:h-auto md:top-0 top-[100px]"
+          />
         </div>
+
       </div>
     </section>
   );

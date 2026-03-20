@@ -315,38 +315,37 @@ const Services = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="bg-[#F3F3F3] rounded-3xl mt-16 p-6 md:p-10 flex flex-col gap-6">
+        {/* CTA Grey Box */}
+<div className="bg-[#F3F3F3] rounded-[45px] mt-20 w-full max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 p-6 md:p-16 h-auto md:h-[347px]">
 
-          {/* Text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-bold">
-              Let's make things happen
-            </h2>
+  {/* Text + Button */}
+  <div className="w-full md:w-1/2 flex flex-col justify-center">
+    <h2 className="text-xl md:text-2xl font-bold md:leading-snug">
+      Let's make things happen
+    </h2>
+    <p className="mt-4 text-sm md:text-base leading-relaxed">
+      Contact us today to learn more about how our digital marketing
+      services can help your business grow and succeed online.
+    </p>
 
-            <p className="mt-4 text-gray-600">
-              Contact us today to learn more about how our digital marketing
-              services can help your business grow and succeed online.
-            </p>
+    {/* Clickable Button */}
+    <a
+      href="/get-proposal"  // <-- Replace this with your actual link
+      className="mt-6 px-4 py-2 bg-black text-white rounded-xl text-sm md:text-base w-fit inline-block transition-all duration-300 hover:bg-gray-800 hover:scale-105"
+    >
+      Get your free proposal
+    </a>
+  </div>
 
-            <a
-              href="/get-proposal"
-              className="mt-6 inline-block px-6 py-3 bg-black text-white rounded-xl"
-            >
-              Get your free proposal
-            </a>
-          </div>
-
-          {/* Image */}
-          <div className="flex justify-center">
-            <img
-              src={Frame19}
-              alt="frame"
-              className="w-full max-w-xs md:max-w-md object-contain"
-            />
-          </div>
-        </div>
-
+  {/* Image */}
+  <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+    <img
+      src={Frame19}
+      alt="frame"
+      className="w-full max-w-full md:max-w-[600px] h-auto object-contain"
+    />
+  </div>
+</div>
       </div>
     </section>
   );
